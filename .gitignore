@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WebDemoMilja/.vs/WebDemoMilja/v15
+/WebDemoMilja/WebDemoMilja/obj
