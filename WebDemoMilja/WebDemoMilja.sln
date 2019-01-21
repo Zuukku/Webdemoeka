@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDemoMilja", "WebDemoMilja\WebDemoMilja.csproj", "{2F12633A-F6D4-407E-9DFC-262B474CA781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDemoMilja", "WebDemoMilja\WebDemoMilja.csproj", "{2F12633A-F6D4-407E-9DFC-262B474CA781}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3132C2CF-2590-4612-9078-B32EB17F3CDE}"
+	ProjectSection(SolutionItems) = preProject
+		Mallinluonti.txt = Mallinluonti.txt
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
