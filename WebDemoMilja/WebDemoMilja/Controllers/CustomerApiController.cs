@@ -31,22 +31,62 @@ namespace WebDemoMilja.Controllers
             if (customerid != null)
             {
                 Customers customer = context.Customers.Find(customerid);
+
                 return customer;
             }
             return null;
         }
 
-        [HttpPost]
-        [Route("")]
-        public Customers PostCreateNew(Customers customer)
+        // lisäys
+
+        [HttpPut]
+        [Route("{customerid}")]
+
+        public Customers PutEdit(string customerid)
+        {
+
+            NorthwindContext context = new NorthwindContext();
+
+            if (customerid != null)
+            {
+                Customers customer = context.Customers.Find(customerid);
+                return customer;
+            }
+            return null;
+        }
+
+
+        // muokkaus
+        [HttpPut]
+        [Route("{customerid}")]
+        public Customers PutEdit([FromRoute] string customerid,
+           [FromBody] Customers newData)
         {
             NorthwindContext context = new NorthwindContext();
 
-            context.Customers.Add(customer);
-            context.SaveChanges();
+            if (customerid != null)
+            {
+                Customers customer = context.Customers.Find(customerid);
 
-            return customer;
+                if (customer != null)
+                {
+                    customer.CompanyName = newData.CompanyName;
+                    customer.ContactName = newData.ContactName;
+                    customer.City = newData.City;
+                    customer.Country = newData.Country;
+                    // ...
+
+                    context.SaveChanges();
+                }
+
+                return customer;
+            }
+            return null;
         }
+
+
+
+        //
 
         [HttpGet]
         [Route("pvm")]
